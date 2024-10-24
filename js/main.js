@@ -292,3 +292,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Initially show all
 	portfolioEntries.forEach(entry => entry.classList.add('show'));
 });
+
+//cursor dot
+
+// Get the cursor element
+const cursor = document.querySelector("#cursor");
+
+// Function to update cursor position
+function updateCursor(x, y) {
+  cursor.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// Function to handle mouse movement
+function handleMouseMove(event) {
+  // Get mouse position
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  // Update cursor position with a slight delay
+  setTimeout(() => {
+    updateCursor(mouseX, mouseY);
+  }, 10); // Adjust this value to increase or decrease the delay
+}
+
+// Add event listener for mouse movement
+document.addEventListener("mousemove", handleMouseMove);

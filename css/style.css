@@ -6,6 +6,16 @@
   font-style: normal;
 }
 
+#cursor{
+  height: 25px;
+  width: 25px;
+  background-color: #dd356dbb;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: transform 0.15s ease-out;
+}
+
 body {
   font-family: "Inconsolata", Arial, sans-serif;
   font-weight: 400;
@@ -14,8 +24,7 @@ body {
   color: #333333;
   background: #fff;
 }
-
-#page {
+#page { 
   position: relative;
   overflow-x: hidden;
   width: 100%;
